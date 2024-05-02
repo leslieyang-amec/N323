@@ -9,7 +9,7 @@ Power on the device with 12/24 VDC (recommended).
 
 ## Steps
 
-1. Download the package.
+1. Download the package. (https://github.com/leslieyang-amec/N323/releases)
 2. Decompress the package.
 3. Execute the "firmwareupgade.bat" file.
 4. Select the related serial port then press the "Connect" button.
