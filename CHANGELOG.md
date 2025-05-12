@@ -5,7 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased 3.6-T3] - 2025-04-10
+## [v3.6-T5] - 2025-05-08
+
+### Fixed
+
+- Transmit the AIS message 12 after system startup.
+- Transmit the AIS message 12/14 with incorrect text length.
+- AIS message payload with an extra byte.
+
+### Added
+
+- Output of all AIS messages feature.
+
+## [3.6-T4] - 2025-04-24
+
+### Fixed
+
+- AIS message 25 Destination flag does not match NMEA 0183 MEB content.
+- AIS message 6/8 DAC and FI field with incorrect value.
+
+### Changed
+
+- NMEA 0183 ALR, alarm's acknowledge state field default value to 'V'.
+- Enhance NMEA 0183 parser.
+
+## [3.6-T3] - 2025-04-10
 
 ### Added
 
@@ -28,7 +52,7 @@ device will output $PAMC,R,USER,61108,2569,2,GNSS antenna state; 2=Ok; 3=Short; 
 - Virtual and synthetic stations' "position accuracy" value should always be set as high,
 - Check the AtoN synchronization status method.
 - NMEA 0183 GNSS data stop output.
-- Then Tx time-out, RATDMA will not abort.
+- When Tx time-out, RATDMA will not abort.
 
 ### Changed
 
