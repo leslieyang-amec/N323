@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Change GNSS module baud rate to increase stability.
+
 ## [v3.6-T5] - 2025-05-08
 
 ### Fixed
