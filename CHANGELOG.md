@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.6-T6] - 2025-06-04
+## [3.6-T6](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T6) - 2025-06-04
 
 ### Fixed
 
@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Change GNSS module baud rate to increase stability.
 
-## [v3.6-T5] - 2025-05-08
+## [v3.6-T5](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T5) - 2025-05-08
 
 ### Fixed
 
@@ -27,7 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Output of all AIS messages feature.
 
-## [3.6-T4] - 2025-04-24
+## [3.6-T4](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T4) - 2025-04-24
 
 ### Fixed
 
@@ -39,7 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - NMEA 0183 ALR, alarm's acknowledge state field default value to 'V'.
 - Enhance NMEA 0183 parser.
 
-## [3.6-T3] - 2025-04-10
+## [3.6-T3](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T3) - 2025-04-10
 
 ### Added
 
