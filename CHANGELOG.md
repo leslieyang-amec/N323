@@ -1,10 +1,5 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
-
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
 ## [3.6-T7](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T7) - 2025-06-25
 
 ### Changed
@@ -83,3 +78,9 @@ device will output $PAMC,R,USER,61108,2569,2,GNSS antenna state; 2=Ok; 3=Short; 
 
 - Support NMEA 0183 MDA,WMV, formatter.
 - Transmit AIS message 8, Meteorological and Hydrographic message.
+
+## Reference
+
+All notable changes to this project will be documented in this file.
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
