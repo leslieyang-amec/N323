@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.6-T7](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T7) - 2025-06-25
+
+### Changed
+
+- Increase the timeout value of the AIS acknowledgement message from 4 to 6 seconds.
+- Enhance GNSS module initial flow.
+
 ## [3.6-T6](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T6) - 2025-06-04
 
 ### Fixed
