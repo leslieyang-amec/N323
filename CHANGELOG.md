@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.6-T8](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T8) - 2025-07-15
+
+### Fixed
+
+- The slot number is incorrect.
+- Some output sentences without the appended TagBlock.
+
 ## [3.6-T7](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T7) - 2025-06-25
 
 ### Changed
