@@ -1,5 +1,23 @@
 # Changelog
 
+## [3.6-T10](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T10) - 2025-08-07
+
+### Fixed
+- ***The AIS message transmission power may be lower than the setting.***
+
+### Changed
+
+- The method of calculating the next transmission time of the RATDMA message scheduling.
+- Fine-tune the default VSWR threshold value.
+
+## [3.6-T9](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T9) - 2025-08-04
+
+### Changed
+
+- Disable output of some NMEA 0183 GNSS data (GBS, VGT, and ZDA).
+- Default GNSS module operation mode at sea level.
+- For Type 1 AtoN, use Message ID 0 with Message ID Index 0 message schedule to transmit NMEA 0183 ABB/BBM data.
+
 ## [3.6-T8](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T8) - 2025-07-15
 
 ### Fixed
