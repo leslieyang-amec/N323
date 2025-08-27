@@ -1,101 +1,91 @@
 # Changelog
 
-## [3.6-T10](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T10) - 2025-08-07
+### [3.6](https://github.com/leslieyang-amec/N323/releases/tag/v3.6) - 2025-08-20
 
-### Fixed
-- ***The AIS message transmission power may be lower than the setting.***
+#### Fixed
 
-### Changed
+修正：
 
-- The method of calculating the next transmission time of the RATDMA message scheduling.
-- Fine-tune the default VSWR threshold value.
+AIS message transmission power is lower than the configured setting.
+AIS 訊息發射功率低於設定值。
 
-## [3.6-T9](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T9) - 2025-08-04
+After exiting power saving mode, the RATDMA access scheme does not resume operation.
+系統離開省電模式後，RATDMA 無法恢復運行。
 
-### Changed
+Writing data into flash memory may fail.
+寫入 Flash 記憶體的操作可能失敗。
 
-- Disable output of some NMEA 0183 GNSS data (GBS, VGT, and ZDA).
-- Default GNSS module operation mode at sea level.
-- For Type 1 AtoN, use Message ID 0 with Message ID Index 0 message schedule to transmit NMEA 0183 ABB/BBM data.
+The AIS slot number is incorrect.
+AIS slot 數值錯誤。
 
-## [3.6-T8](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T8) - 2025-07-15
+- Some output sentences are missing the appended TAG Block.
+輸出 GNSS 模組資料時，未附加 TAG Block 資訊。
 
-### Fixed
+- NMEA 0183 encapsulation data contains an extra byte.
+產生 NMEA 0183 encapsulation 資料時，多增加一個 byte。
 
-- The slot number is incorrect.
-- Some output sentences without the appended TagBlock.
+- AIS Message 12 is transmitted unexpectedly at system startup.
+系統開機時，會誤發送一筆 AIS Message 12。
 
-## [3.6-T7](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T7) - 2025-06-25
+- AIS Message 6/8/12/14 is transmitted with incorrect text length.
+AIS Message 6/8/12/14 訊息內容長度與輸入不一致。
 
-### Changed
+- AIS message payload includes an extra byte.
+輸出 NMEA VDO/VDM encapsulation 資料時，長度不正確。
 
-- Increase the timeout value of the AIS acknowledgement message from 4 to 6 seconds.
-- Enhance GNSS module initial flow.
+- AIS Message 25 destination flag does not match the NMEA 0183 MEB content.
+AIS Message 25 Destination flag 與 NMEA 0183 MEB 內容不一致。
 
-## [3.6-T6](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T6) - 2025-06-04
+- AIS Message 6/8 DAC and FI field values are incorrect.
+AIS Message 6/8/25/26 DAC 與 FI 欄位值與 NMEA 0183 ABM/BBM/MEB 內容不一致。
 
-### Fixed
+- LED behavior is incorrect.
+LED 出現混色顯示，而非單色。
 
-- NMEA 0183 encapsulation data with extra data.
+- Incorrect default value of UTC time.
+UTC Time 預設值應為 00:00:00，而非隨機值。
 
-### Changed
+- Virtual and synthetic stations’ “position accuracy” should always be set to “High”.
+Virtual 與 Synthetic stations 的 position accuracy 預設應為 High。
 
-- Change GNSS module baud rate to increase stability.
+- NMEA 0183 GNSS data stops outputting after system restart.
+系統重新啟動後，GNSS 模組資料未輸出。
 
-## [v3.6-T5](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T5) - 2025-05-08
+- RATDMA does not reset after Tx timeout or abort, preventing further transmissions.
+當發射時間發生 timeout 或 abort 時，RATDMA 狀態未重置，導致後續無法正常發射。
 
-### Fixed
+- Fine-tuned the default VSWR threshold value.
+修正 VSWR 門檻值的預設設定。
 
-- Transmit the AIS message 12 after system startup.
-- Transmit the AIS message 12/14 with incorrect text length.
-- AIS message payload with an extra byte.
+#### Changed
+修改：
 
-### Added
+- Disabled output of certain NMEA 0183 GNSS sentences (GBS, VGT, and ZDA).
+停止輸出部分 GNSS NMEA 0183 資料 (GBS, VGT, ZDA)。
 
-- Output of all AIS messages feature.
+- Default GNSS module dynamic platform model set to “sea”.
+GNSS 模組 dynamic platform model 預設為 sea。
 
-## [3.6-T4](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T4) - 2025-04-24
+- NMEA 0183 ALR acknowledge state field default value changed to “V” (unacknowledged).
+NMEA 0183 ALR 中 acknowledge state 欄位預設值由 “A” (acknowledged) 修改為 “V” (unacknowledged)。
 
-### Fixed
+#### Added
+新增：
 
-- AIS message 25 Destination flag does not match NMEA 0183 MEB content.
-- AIS message 6/8 DAC and FI field with incorrect value.
+- For Type 1 AtoN, support transmitting NMEA 0183 ABM/BBM data using Message ID 0 with Message ID Index 0 scheduling.
+AtoN Type 1 支援透過訊息 (0, 0) 排程發送 NMEA 0183 ABM/BBM 資料。
 
-### Changed
+- Implemented redundant feature.
+實作備援 (redundant) 機制。
 
-- NMEA 0183 ALR, alarm's acknowledge state field default value to 'V'.
-- Enhance NMEA 0183 parser.
+- G-sensor feature: When the detected G value exceeds the threshold, the system triggers the transmission of AIS Message 12/14.
+當 G-sensor 偵測值超過門檻時，系統觸發發送 AIS Message 12/14。
 
-## [3.6-T3](https://github.com/leslieyang-amec/N323/releases/tag/v3.6-T3) - 2025-04-10
+- Added support for NMEA 0183 MDA and WMV formatters.
+支援 NMEA 0183 MDA、WMV 格式。
 
-### Added
-
-- Support NMEA 0183 XDR foramtter.
-- Configure mapping between NMEA 0183 XDR transducer ID and AIS message 8 Met/Hydro.
-- Add a check external SPI flash status. Output PAMC sentence if there is an error.
-- The restart operation after deleting the real AtoN station
-- Redundant setting
-- Add support query GNSS antenna state via $PAMC,Q,USER,61108,,,*61 command,
-device will output $PAMC,R,USER,61108,2569,2,GNSS antenna state; 2=Ok; 3=Short; 4=Open*08
-- G sensor features
-
-### Fixed
-
-- Write the firmware version into internal flash with wrong data.
-  Write the firmware version, the operation should be executed after generating the firmware version.
-- LED incorrect behavior.
-- UTC time initial value.
-- Sequence ID of NMEA 0183 VDO, the value will increase when the total sentence number is one.
-- Virtual and synthetic stations' "position accuracy" value should always be set as high,
-- Check the AtoN synchronization status method.
-- NMEA 0183 GNSS data stop output.
-- When Tx time-out, RATDMA will not abort.
-
-### Changed
-
-- FATDMA/RATDMA schedule count increase to 80.
-- RATDMA random set start slot method, if there are more than 10 messages that need to be transmitted in the current minute,
-  the transmission will be one by one instead of random in a minute. 
+- Added support for transmitting AIS Message 8 (Meteorological and Hydrographic message).
+支援發送 AIS Message 8 (水文氣象訊息)。
 
 ### [3.5.1] - 2024-08-16
 
