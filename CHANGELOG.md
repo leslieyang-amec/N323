@@ -1,6 +1,6 @@
 # Changelog
 
-### [3.6](https://github.com/leslieyang-amec/N323/releases/tag/v3.6) - 2025-08-20
+### [3.6](https://github.com/leslieyang-amec/N323/releases/tag/v3.6) - 2025-08-21
 
 #### Fixed
 
