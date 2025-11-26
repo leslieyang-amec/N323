@@ -1,6 +1,4 @@
-# N323
-
-AIS AtoN
+# N323 Firmware Upgrade Procedure
 
 ## Prepare
 
