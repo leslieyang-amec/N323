@@ -9,12 +9,9 @@ Power on the device with 12/24 VDC (recommended).
 
 ## Steps
 
-1. Download the latest utility package. (https://github.com/leslieyang-amec/xAisConfigtionTool/releases)
-2. Decompress the package. (`[DECOMPRESS_PATH]`)
-3. Download the firmware upgrade `.pdfu` file. (https://github.com/leslieyang-amec/N323/releases)
-4. Place the .pdfu file in the following path `[DECOMPRESS_PATH]\xAisUtility\FirmwareUpgrade_BinFile\AisAtoN\`
-5. Execute the `FirmwareUpgade.bat` file. ( `[DECOMPRESS_PATH]\xAisUtility\FirmwareUpgrade.bat` )
-6. Select the related serial port then press the `Connect` button.
-7. Browse the firmware upgrade file. The default path is `[DECOMPRESS_PATH]\FirmwareUpgrade_BinFile\AisAtoN\*.pdfu`
-8. Press the `Start` button.
-
+1. Download the firmware upgrade package.
+2. Decompress the package.
+3. Execute the `FirmwareUpgrade.bat` file. ( `[DECOMPRESS_PATH]\FirmwareUpgrade.bat` )
+4. Select the related serial port, then press the `Connect` button.
+5. Browse the firmware upgrade file. The default path is `[DECOMPRESS_PATH]\FirmwareUpgrade_BinFile\AisAtoN\*.pdfu`
+6. Press the `Start` button.
